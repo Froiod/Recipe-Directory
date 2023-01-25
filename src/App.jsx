@@ -5,11 +5,13 @@ import Recipe from './pages/recipe/Recipe'
 import Search from './pages/search/Search'
 import Create from './pages/create/Create'
 import Home from './pages/home/Home'
+import Navbar from './components/Navbar'
 
 const App = () => {
   return (
     <div className='min-h-full'>
       <BrowserRouter>
+        <Navbar />  
         <Routes>
           <Route exact path="/" element={<Home/>} />
         </Routes>
