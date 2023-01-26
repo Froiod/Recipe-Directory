@@ -19,3 +19,6 @@ body {
 h1,h2,h3,p {
   margin: 0;
 }
+.load-err {
+  @apply text-center my-10 mx-auto
+}
