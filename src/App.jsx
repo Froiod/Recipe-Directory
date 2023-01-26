@@ -22,7 +22,7 @@ const App = () => {
           <Route exact path="/search" element={<Search/>} />
         </Routes>
         <Routes>
-          <Route exact path="/recipe/:id" element={<Recipe/>} />
+          <Route exact path="/recipes/:id" element={<Recipe/>} />
         </Routes>
       </BrowserRouter>
     </div>

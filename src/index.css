@@ -22,3 +22,9 @@ h1,h2,h3,p {
 .load-err {
   @apply text-center my-10 mx-auto
 }
+.max {
+  max-width: 1200px;
+}
+.margin {
+  margin: 40px auto;
+}
