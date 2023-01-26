@@ -19,6 +19,9 @@ body {
 h1,h2,h3,p {
   margin: 0;
 }
+input, textarea {
+  @apply text-gray-700 p-2 text-base rounded border border-gray-300 bg-white block w-full box-border
+}
 .load-err {
   @apply text-center my-10 mx-auto
 }
@@ -27,4 +30,21 @@ h1,h2,h3,p {
 }
 .margin {
   margin: 40px auto;
+}
+.span {
+  display: block;
+  margin: 30px 0px 10px;
+}
+button {
+  display: block;
+  width: 100%;
+  font-size: 1em;
+  color: white;
+  padding: 8px 20px;
+  border: 0;
+  border-radius: 4px;
+  background-color: #58249c;
+  cursor: pointer;
+  text-decoration: none;
+  margin: 20px auto;
 }
