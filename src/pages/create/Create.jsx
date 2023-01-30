@@ -1,15 +1,30 @@
 import React from 'react'
-import {useState} from 'react'
+import {useState, useRef} from 'react'
 
 const Create = () => {
 
   const [title, setTitle] = useState('')
   const [method, setMethod] = useState('')
   const [cookingTime, setCookingTime] = useState('')
+  const [newIngredients, setNewIngredients] = useState('')
+  const [ingredients, setIngredients] = useState([])
+  const ingredientsInput = useRef(null)
 
   const handleSubmit = (e) => {
     e.preventDefault()
-    console.log(title, method, cookingTime)
+    console.log(title, method, cookingTime, ingredients)
+  }
+
+  const handleAdd = (e) => {
+    e.preventDefault
+    const ing = newIngredients.trim()
+
+    if (ing && !ingredients.includes(ing)) {
+      setIngredients(prevIngredients => [...prevIngredients, ing])
+    }
+
+    setNewIngredients('')
+    ingredientsInput.current.focus()
   }
 
   return (
@@ -27,6 +42,20 @@ const Create = () => {
             required
           />
         </label>
+
+        <label>
+          <span>Recipe ingredients</span>
+          <div className="flex items-center">
+            <input 
+              type="text" 
+              onChange={(e) => setNewIngredients(e.target.value)}
+              value={newIngredients}
+              ref={ingredientsInput}
+            />
+            <button onClick={handleAdd} className="text-[1em] text-white py-1 px-5 ml-2 my-0 rounded bg-purple-700 cursor-pointer">add</button>
+          </div>
+        </label>
+        <p>Current Ingredients: {ingredients.map(i => <em key="i">{i},</em>)}</p>
 
         <label>
           <span className='span'>Recipe Method:</span>
@@ -47,7 +76,7 @@ const Create = () => {
           />
         </label>
 
-        <button className='button'>Submit</button>
+        <button className='text-[1em] w-full text-white py-2 px-5 my-5 mx-auto border-0 rounded bg-purple-700 cursor-pointer block'>Submit</button>
 
       </form>
     </div>
