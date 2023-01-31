@@ -1,5 +1,6 @@
 import React from 'react'
 import {Link} from 'react-router-dom';
+import Searchbar from './Searchbar';
 
 const Navbar = () => {
   return (
@@ -8,8 +9,9 @@ const Navbar = () => {
         <Link to="/" className='mr-auto'>
           <h1 className='text-3xl font-bold'>Cooking Ina</h1>
         </Link>
+        <Searchbar />
         <Link to="/create" className='p-2 border border-white rounded hover:bg-white  hover:text-gray-700'>
-          <h1>Create Recipe</h1>
+          Create Recipe
         </Link>
       </nav>
     </div>
