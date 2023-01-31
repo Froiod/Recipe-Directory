@@ -1,5 +1,5 @@
-import React from 'react'
-import {useState, useRef} from 'react'
+import {useNavigate} from 'react-router-dom';
+import {useState, useRef, useEffect} from 'react'
 import {useFetch} from '../../hooks/useFetch';
 
 const Create = () => {
@@ -10,6 +10,7 @@ const Create = () => {
   const [newIngredients, setNewIngredients] = useState('')
   const [ingredients, setIngredients] = useState([])
   const ingredientsInput = useRef(null)
+  const navigate = useNavigate()
 
   const {postData, data, error} = useFetch('http://localhost:3000/recipes', 'POST')
 
@@ -29,6 +30,12 @@ const Create = () => {
     setNewIngredients('')
     ingredientsInput.current.focus()
   }
+
+  useEffect(() => {
+    if (data) {
+      navigate('/')
+    }
+  }, [data])
 
   return (
     <div className='text-gray-600 margin max-w-lg'>
