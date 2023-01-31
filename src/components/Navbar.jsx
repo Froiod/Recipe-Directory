@@ -10,7 +10,7 @@ const Navbar = () => {
           <h1 className='text-3xl font-bold'>Cooking Ina</h1>
         </Link>
         <Searchbar />
-        <Link to="/create" className='p-2 border border-white rounded hover:bg-white  hover:text-gray-700'>
+        <Link to="/create" className='p-2 border border-white rounded hover:bg-white  hover:text-gray-700 text-base'>
           Create Recipe
         </Link>
       </nav>
