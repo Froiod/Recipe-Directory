@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom'
 
 const RecipeList = ({recipes}) => {
   return (
-    <div className='grid gap-10 max-w-[1200px] grid-cols-3 my-10 mx-auto'>
+    <div className='grid gap-10 max-w-[1200px] md:grid-cols-3 grid-cols-2 my-10 mx-auto'>
       {recipes.map((recipe) => (
         <div key={recipe.id} className='relative bg-white text-gray-700 p-5 rounded shadow-md shadow-black transition-transform ease-linear duration-300 hover:rotate-2'>
           <h3 className='text-gray-700 text-2xl font-bold mb-1'>{recipe.title}</h3>
