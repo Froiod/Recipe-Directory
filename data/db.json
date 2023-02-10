@@ -1,3 +1,13 @@
 {
-  "recipes": []
+  "recipes": [
+    {
+      "title": "Adobo",
+      "ingredients": [
+        "dada"
+      ],
+      "method": "kahoy",
+      "cookingTime": "23 minutes",
+      "id": 1
+    }
+  ]
 }

@@ -3,10 +3,12 @@ import { FaTimes } from 'react-icons/fa';
 import {Link} from 'react-router-dom'
 
 const RecipeList = ({recipes}) => {
-
+  
   const handleClick = async (id) => {
+    
     await fetch(`http://localhost:3000/recipes/${id}`, {method: 'DELETE'})
-    setList(list.filter((recipe) => recipe.id !== id))
+    setList(list.filter((recipe) => recipe.id !==id))
+    
   }
   
   const [list, setList] = useState(recipes)
